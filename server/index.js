@@ -9,7 +9,7 @@ import express from "express";
 import path from "path";
 
 import "dotenv/config";
-import { host, port } from "../utils/vars.js";
+import { port } from "../utils/vars.js";
 
 const app = express();
 
@@ -106,6 +106,6 @@ socket.on("connection", (client) => {
  * Show Data
  */
 
-server.listen(port, host, () => {
-    console.log(`Server ready on http://${host}:${port}/`);
+server.listen(port, () => {
+    console.log(`Server ready on http://localhost:${port}/`);
 });
