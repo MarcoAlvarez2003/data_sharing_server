@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="UTF-8" />
+
+        <title>Data Sharing Server</title>
+    </head>
+    <body>
+        <%- include("../partials/header.ejs") %>
+
+        <input type="file" id="file" multiple />
+
+        <script src="/socket.io/socket.io.min.js"></script>
+
+        <script src="../scripts/index.js" type="module"></script>
+
+        <p></p>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="UTF-8" />
+
+        <%- include("./partials/imports/styles.ejs") %>
+
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="head">
+                <div class="identify" id="identifier">Desconocido</div>
+
+                <div class="state" id="connection-state">Desemparejado</div>
+
+                <div class="conn">
+                    <input type="text" id="connection-input" placeholder="Ingresa el código de la maquina a la que conectarse" />
+                </div>
+
+                <div class="username">
+                    <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" />
+                </div>
+            </div>
+
+            <div class="body">
+                <div class="preview">
+                    <div class="content" id="preview"></div>
+
+                    <div class="select">
+                        <div>
+                            <input type="file" id="file-input" multiple />
+                        </div>
+
+                        <div>
+                            <button id="send-files">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat" id="chat">
+                    <div class="content" id="messages"></div>
+
+                    <div class="select">
+                        <div>
+                            <input type="text" id="message" placeholder="Escribe tu mensaje" />
+                        </div>
+
+                        <div>
+                            <button id="send-message">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history" id="history"></div>
+            </div>
+        </div>
+
+        <script src="/socket.io/socket.io.min.js"></script>
+        <script src="../scripts/index.js" type="module"></script>
+    </body>
+</html>

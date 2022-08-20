@@ -1,0 +1,175 @@
+input,
+button {
+    padding: 5px;
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+a {
+    display: block;
+    padding: 10px 0px;
+}
+
+p {
+    word-wrap: break-word;
+    font-size: x-small;
+
+}
+
+/* For Debug */
+/* div {
+    border: 1px solid #000;
+} */
+
+img,
+video,
+iframe {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.app {
+    height: 100%;
+    width: 100%;
+}
+
+.app>.head {
+    display: flex;
+    height: 10%;
+    width: 100%;
+}
+
+
+.identify,
+.state {
+    font-size: x-small;
+    height: 100%;
+    width: 50%;
+}
+
+.conn,
+.username {
+    height: 100%;
+    width: 100%;
+}
+
+.username,
+.identify,
+.state,
+.conn {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app>.body {
+    display: flex;
+    height: 90%;
+    width: 100%;
+}
+
+.preview {
+    width: 100%;
+}
+
+.history {
+    width: 100%;
+}
+
+.chat {
+    width: 100%;
+}
+
+.history {
+    padding: 5px;
+}
+
+.preview {
+    border-right: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.select,
+.content {
+    grid-column: span 2;
+}
+
+.content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    height: 90%;
+}
+
+.content::-webkit-scrollbar,
+.history::-webkit-scrollbar {
+    display: none;
+}
+
+.select {
+    height: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.select>div {
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.history {
+    border-left: 1px solid #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* Theme */
+
+.app {
+    background-color: #1b1b1b;
+    color: #fff;
+}
+
+input {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+img,
+video {
+    border-radius: 5px;
+}
+
+button {
+    outline: 0;
+    border: 0;
+
+    color: #000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+button:hover {
+    background-color: #ccc;
+}
+
+button:active {
+    background-color: #999;
+}
+
+.app>.head {
+    background-color: #151515;
+    border-bottom: 1px solid #fff;
+}
