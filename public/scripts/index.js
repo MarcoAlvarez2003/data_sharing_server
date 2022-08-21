@@ -189,6 +189,8 @@ function previewFile(file) {
             link.download = file.name;
             link.href = file.body;
 
+            link.classList.add("a");
+
             return link;
         }
 
@@ -198,6 +200,8 @@ function previewFile(file) {
 
             video.controls = true;
             video.src = file.body;
+
+            video.classList.add("video");
 
             return video;
         }
@@ -221,6 +225,8 @@ function previewFile(file) {
             const image = document.createElement("img");
 
             image.src = file.body;
+
+            image.classList.add("image");
 
             return image;
         }

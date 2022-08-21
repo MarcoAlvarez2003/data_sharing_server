@@ -12,45 +12,45 @@
     </head>
     <body>
         <div class="app">
-            <div class="head">
-                <div class="identify" id="identifier">Desconocido</div>
+            <div class="app__head">
+                <div class="show__client-id" id="identifier">Desconocido</div>
 
-                <div class="state" id="connection-state">Desemparejado</div>
+                <div class="show__connection-state" id="connection-state">Desemparejado</div>
 
-                <div class="conn">
-                    <input type="text" id="connection-input" placeholder="Ingresa el código de la maquina a la que conectarse" />
+                <div class="show__connection-input">
+                    <input type="text" class="input" id="connection-input" placeholder="Ingresa el código de la maquina a la que conectarse" />
                 </div>
 
-                <div class="username">
-                    <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" />
+                <div class="show__client-name">
+                    <input type="text" class="input" id="username" placeholder="Ingresa tu nombre de usuario" />
                 </div>
             </div>
 
-            <div class="body">
+            <div class="app__body">
                 <div class="preview">
-                    <div class="content" id="preview"></div>
+                    <div class="preview__content" id="preview"></div>
 
-                    <div class="select">
-                        <div>
-                            <input type="file" id="file-input" multiple />
+                    <div class="preview__controls">
+                        <div class="div-expand div-pad">
+                            <input type="file" class="input" id="file-input" multiple />
                         </div>
 
-                        <div>
-                            <button id="send-files">Enviar</button>
+                        <div class="div-expand div-pad">
+                            <button id="send-files" class="button">Enviar</button>
                         </div>
                     </div>
                 </div>
 
                 <div class="chat" id="chat">
-                    <div class="content" id="messages"></div>
+                    <div class="chat__content" id="messages"></div>
 
-                    <div class="select">
-                        <div>
-                            <input type="text" id="message" placeholder="Escribe tu mensaje" />
+                    <div class="chat__controls">
+                        <div class="div-expand div-pad">
+                            <input type="text" class="input" id="message" placeholder="Escribe tu mensaje" />
                         </div>
 
-                        <div>
-                            <button id="send-message">Enviar</button>
+                        <div class="div-expand div-pad">
+                            <button id="send-message" class="button">Enviar</button>
                         </div>
                     </div>
                 </div>

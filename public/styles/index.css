@@ -1,8 +1,4 @@
-input,
-button {
-    padding: 5px;
-    width: 100%;
-}
+/* Normalizing */
 
 body {
     overflow: hidden;
@@ -10,65 +6,76 @@ body {
     width: 100vw;
 }
 
-a {
-    display: block;
-    padding: 10px 0px;
+.button,
+.input {
+    padding: 5px;
+    width: 100%;
 }
 
-p {
+.a {
+    margin-bottom: 10px;
+    padding: 5px 0;
+    display: block;
+}
+
+.p {
     word-wrap: break-word;
     font-size: x-small;
-
 }
 
-/* For Debug */
-/* div {
-    border: 1px solid #000;
-} */
-
-img,
-video,
-iframe {
+.image,
+.video {
     margin-bottom: 10px;
     width: 100%;
 }
+
+/* Debugging */
+
+div {
+    border: 0px solid #000;
+}
+
+
+/* Styles For App Class Using BEM */
+
 
 .app {
     height: 100%;
     width: 100%;
 }
 
-.app>.head {
+.app__head {
     display: flex;
     height: 10%;
     width: 100%;
 }
 
 
-.identify,
-.state {
+
+.show__connection-state,
+.show__client-id {
     font-size: x-small;
     height: 100%;
     width: 50%;
 }
 
-.conn,
-.username {
+.show__connection-input,
+.show__client-name {
     height: 100%;
     width: 100%;
 }
 
-.username,
-.identify,
-.state,
-.conn {
-    padding: 5px;
-    display: flex;
-    align-items: center;
+.show__connection-state,
+.show__connection-input,
+.show__client-name,
+.show__client-id {
     justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 5px;
 }
 
-.app>.body {
+.app__body {
     display: flex;
     height: 90%;
     width: 100%;
@@ -78,7 +85,22 @@ iframe {
     width: 100%;
 }
 
+.preview__content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+    height: 90%;
+}
+
+.preview__controls {
+    display: flex;
+    height: 10%;
+}
+
 .history {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 5px;
     width: 100%;
 }
 
@@ -86,90 +108,96 @@ iframe {
     width: 100%;
 }
 
-.history {
-    padding: 5px;
-}
-
-.preview {
-    border-right: 1px solid #fff;
-    display: flex;
-    flex-direction: column;
-}
-
-.select,
-.content {
-    grid-column: span 2;
-}
-
-.content {
+.chat__content {
     overflow-x: hidden;
     overflow-y: scroll;
-    padding: 10px;
+    padding: 5px;
     height: 90%;
 }
 
-.content::-webkit-scrollbar,
+.chat__controls {
+    display: flex;
+    height: 10%;
+}
+
+/* Utils */
+
+.div-expand {
+    width: 100%;
+}
+
+.div-pad {
+    padding: 5px;
+}
+
+.preview__content::-webkit-scrollbar,
+.chat__content::-webkit-scrollbar,
 .history::-webkit-scrollbar {
     display: none;
 }
 
-.select {
-    height: 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 
-.select>div {
-    padding: 5px;
-    height: 100%;
-    width: 100%;
-}
-
-.history {
-    border-left: 1px solid #fff;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-/* Theme */
+/* Color Theme */
 
 .app {
+    color: #fff;
+}
+
+.app__head {
+    background-color: #111111;
+}
+
+.app__body {
     background-color: #1b1b1b;
+}
+
+.preview,
+.history {
+    background-color: #191919;
+}
+
+.input {
+    background-color: #000;
+    border: 1px solid #fff;
+    outline: 0 solid #000;
+    border-radius: 5px;
     color: #fff;
 }
 
-input {
-    background-color: transparent;
-    outline: 0;
-    border: 0;
+.image,
+.video {
+    border-radius: 5px;
+}
+
+.image:hover,
+.video:hover {
+    box-shadow: 0 0 5px #fff;
+}
+
+.image:hover,
+.video:hover,
+.a:hover {
+    transform: scale(0.95);
+}
+
+.button {
+    background-color: #000;
+    border: 1px solid #fff;
+    outline: 0 solid #000;
+    border-radius: 5px;
     color: #fff;
-    border-bottom: 1px solid #fff;
+
 }
 
-img,
-video {
-    border-radius: 5px;
-}
-
-button {
-    outline: 0;
-    border: 0;
-
-    color: #000;
-    border-radius: 5px;
+.button:hover,
+.input:hover {
     background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
 }
 
-
-button:hover {
-    background-color: #ccc;
-}
-
-button:active {
-    background-color: #999;
-}
-
-.app>.head {
-    background-color: #151515;
-    border-bottom: 1px solid #fff;
+.button:active {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
 }
