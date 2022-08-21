@@ -333,6 +333,8 @@ fileInputElement.addEventListener("change", async () => {
 sendMessageButton.addEventListener("click", () => {
     if (!connectionInputElement.value.length) return alert("Necesitas un id primero");
 
+    if (socket.id === connectionInputElement.value) return alert("No puedes usar tu mismo id");
+
     sendMessage({ name: usernameInputElement.value, to: connectionInputElement.value, text: messageInputElement.value, from: socket.id });
 });
 
